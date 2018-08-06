@@ -1,0 +1,24 @@
+spring:
+ profiles:
+   active: dev #选择配置文件
+#配置jdbc数据库信息
+ datasource:
+   driver-class-name: com.mysql.jdbc.Driver
+   url: jdbc:mysql://127.0.0.1:3306/dbpeople?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+   username: root
+   password: 123456
+#  配置JPA框架的信息
+ jpa:
+   hibernate:
+     ddl-auto: update # 可选参数: create 即为每次运行都会清空数据库表
+   show-sql: true #显示sql语句在控制台
+
+##配置数据库连接池
+#  spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+#  #Mybatis数据源配置
+#  spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+#  spring.datasource.url=jdbc:mysql://127.0.0.1:3306/table_mv?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#  spring.datasource.username=root
+#  spring.datasource.password=123456
+#  #mapper的XML路径
+#  mybatis.mapper-locations=/mapper/**.xml
